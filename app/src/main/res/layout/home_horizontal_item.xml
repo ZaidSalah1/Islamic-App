@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Activties.MainActivity"
+    app:cardCornerRadius="20dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:onClick="onCardClick"
+    android:id="@+id/cardView"
+    android:layout_marginBottom="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:gravity="center"
+       >
+
+        <ImageView
+            android:id="@+id/imageHor"
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:src="@drawable/quran_ic"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/textHor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quran"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

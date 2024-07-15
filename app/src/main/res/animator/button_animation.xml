@@ -1,0 +1,8 @@
+<!-- button_animation.xml -->
+<objectAnimator
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300"
+    android:propertyName="scaleX"
+    android:valueFrom="1.0"
+    android:valueTo="0.8"
+    android:valueType="floatType"/>
