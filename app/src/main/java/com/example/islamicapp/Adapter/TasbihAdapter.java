@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.islamicapp.Models.AthkarModel;
@@ -18,10 +19,12 @@ public class TasbihAdapter extends RecyclerView.Adapter<TasbihAdapter.MyViewHold
 
     Context context;
     ArrayList<AthkarModel> athkarModelsList;
+    int width;
 
-    public TasbihAdapter(Context context, ArrayList<AthkarModel> athkarModelsList) {
+    public TasbihAdapter(Context context, ArrayList<AthkarModel> athkarModelsList, int width) {
         this.context = context;
         this.athkarModelsList = athkarModelsList;
+        this.width = width;
     }
 
     @NonNull
@@ -36,6 +39,15 @@ public class TasbihAdapter extends RecyclerView.Adapter<TasbihAdapter.MyViewHold
     public void onBindViewHolder(@NonNull TasbihAdapter.MyViewHolder holder, int position) {
         holder.text.setText(athkarModelsList.get(position).getText());
         holder.counterText.setText(String.valueOf(athkarModelsList.get(position).getCounter()));
+
+//       holder.cardView.getLayoutParams().height = ;
+        if (position == athkarModelsList.size() - 1 || position == 0) {
+            holder.cardView.getLayoutParams().width = width - 100;
+        }
+        else{
+            holder.cardView.getLayoutParams().width = width - 200;
+
+        }
     }
 
     @Override
@@ -51,11 +63,14 @@ public class TasbihAdapter extends RecyclerView.Adapter<TasbihAdapter.MyViewHold
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView text;
         TextView counterText;
+        CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             text = itemView.findViewById(R.id.txtTasbih);
+            cardView = itemView.findViewById(R.id.odehCardView);
             counterText = itemView.findViewById(R.id.counterText);
+
         }
     }
 }

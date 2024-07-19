@@ -8,29 +8,28 @@
     android:layout_marginBottom="20dp"
     app:cardCornerRadius="20dp"
     app:cardElevation="10dp"
-    >
+    android:id="@+id/odehCardView">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/tasbih_bg2"
-        android:orientation="vertical"
         android:gravity="center"
-        android:padding="10dp"
-        >
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/txtTasbih"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:autoSizeMinTextSize="25dp"
             android:background="@drawable/shape2"
             android:gravity="center"
-            android:text="Placeholder Text"
+            android:text=" Text"
             android:textColor="@color/white"
             android:textSize="30dp"
             android:textStyle="bold"
-            android:autoSizeMinTextSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
