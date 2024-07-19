@@ -4,13 +4,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.islamicapp.Adapter.ImagePagerAdapter;
-import com.example.islamicapp.FragmentActivities.FragmentOne;
 import com.example.islamicapp.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -31,51 +28,6 @@ public class SurahActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_surah);
-
-        tabLayout = findViewById(R.id.tabLayout);
-        fragmentManager = getSupportFragmentManager();
-
-        // Add tabs to TabLayout
-        tabLayout.addTab(tabLayout.newTab().setText("Read"));
-        tabLayout.addTab(tabLayout.newTab().setText("Read & Listen"));
-        tabLayout.addTab(tabLayout.newTab().setText("Listen"));
-
-        // Replace fragment on tab selection
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                Fragment selectedFragment = null;
-                switch (tab.getPosition()) {
-                    case 0:
-                     //   selectedFragment = new FragmentOne();
-                        break;
-                    case 1:
-                      //  selectedFragment = new ReadQuran();
-                        break;
-                    case 2:
-                        selectedFragment = new FragmentOne();
-                        break;
-                }
-                if (selectedFragment != null) {
-                    FragmentTransaction transaction = fragmentManager.beginTransaction();
-                    transaction.replace(R.id.fragmentContainer, selectedFragment);
-                    transaction.commit();
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-                // Not needed for this example
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-                // Not needed for this example
-            }
-        });
-//        FragmentTransaction transaction = fragmentManager.beginTransaction();
-//        transaction.replace(R.id.fragmentContainer, new FragmentOne());
-//        transaction.commit();
 
         viewPager = findViewById(R.id.viewPager) ;
         viewPager.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);

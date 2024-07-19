@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        />
+
+    <item
+        android:id="@+id/quran"
+        android:title="Quran"
+        android:icon="@drawable/koran"
+        />
+
+
+    <item
+        android:id="@+id/prayerTime"
+        android:title=""
+        android:enabled="false"
+        android:iconTint="@color/white"
+        />
+
+
+    <item
+        android:id="@+id/athkar"
+        android:title="Athkar"
+        android:icon="@drawable/tasbih_black"
+        android:iconTint="@color/black"
+
+        />
+
+
+
+    <item
+        android:id="@+id/mine"
+        android:title="Mine"
+        android:icon="@drawable/person_ic"
+        />
+
+</menu>

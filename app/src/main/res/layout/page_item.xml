@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#FBF7F1">
 
     <ImageView
         android:layout_marginTop="@dimen/_5sdp"
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_530sdp"
+        android:layout_height="@dimen/_570sdp"
         android:scaleType="fitXY"
         android:src="@drawable/s1"
         app:layout_constraintEnd_toEndOf="parent"

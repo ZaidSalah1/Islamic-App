@@ -22,10 +22,11 @@ public class ReadQuranAdapter extends RecyclerView.Adapter<ReadQuranAdapter.MyVi
 
     Context context;
     ArrayList<QuranModel> quranModelsList;
-
-    public ReadQuranAdapter(Context context, ArrayList<QuranModel> quranModels) {
+    boolean isRead;
+    public ReadQuranAdapter(Context context, ArrayList<QuranModel> quranModels, boolean isRead) {
         this.context = context;
         this.quranModelsList = quranModels;
+        this.isRead = isRead;
     }
 
     @NonNull
@@ -45,18 +46,24 @@ public class ReadQuranAdapter extends RecyclerView.Adapter<ReadQuranAdapter.MyVi
         String surahName = quranModelsList.get(position).getTxtSurahEngName();
         String surahNumber = quranModelsList.get(position).getNumber();
         holder.txtSurahNumber.setText(surahNumber);
-//        holder.itemView.setOnClickListener(v -> {
-//            Intent intent = new Intent(context, SurahActivity.class);
-//            //  Toast.makeText(context, surahName, Toast.LENGTH_SHORT).show();
-//            intent.putExtra("SURAH_NUMBER", surahNumber);
-//            context.startActivity(intent);
-//        });
-        holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, ReadListen.class);
-            //  Toast.makeText(context, surahName, Toast.LENGTH_SHORT).show();
-            intent.putExtra("SURAH_NUMBER", surahNumber);
-            context.startActivity(intent);
-        });
+
+        if(isRead == true){
+            holder.itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(context, SurahActivity.class);
+                //  Toast.makeText(context, surahName, Toast.LENGTH_SHORT).show();
+                intent.putExtra("SURAH_NUMBER", surahNumber);
+                context.startActivity(intent);
+            });
+        }else{
+            holder.itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(context, ReadListen.class);
+                //  Toast.makeText(context, surahName, Toast.LENGTH_SHORT).show();
+                intent.putExtra("SURAH_NUMBER", surahNumber);
+                context.startActivity(intent);
+            });
+        }
+
+
 
     }
 

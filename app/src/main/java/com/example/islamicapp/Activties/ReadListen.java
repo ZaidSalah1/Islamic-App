@@ -159,7 +159,7 @@ public class ReadListen extends AppCompatActivity {
 
                             for (int j = 0; j < ayahs.length(); j++) {
                                 JSONObject ayah = ayahs.getJSONObject(j);
-                                String text = ayah.getString("text");
+                                String text = ayah.getString("text").replace("\n","");
                                 if (j < list.size()) {
                                     list.get(j).setText(text);
                                 }

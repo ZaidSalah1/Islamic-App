@@ -15,11 +15,12 @@
         android:theme="@style/Theme.IslamicApp"
         tools:targetApi="31">
         <activity
-            android:name=".Activties.ReadListen"
+            android:name=".Activties.QuranSelectionActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentActivities.ReadQuran"
+            android:name=".Activties.ReadListen"
             android:exported="false" />
+
         <activity
             android:name=".Activties.SurahActivity"
             android:exported="false" />

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -30,7 +31,7 @@ public class QuranActivity extends AppCompatActivity {
     private ReadQuranAdapter readQuranAdapter;
     private ArrayList<QuranModel> quranModelArrayList;
     private ArrayList<String> surahNamesArabic;
-
+    boolean check;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,8 @@ public class QuranActivity extends AppCompatActivity {
         quranSurahLists.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         quranModelArrayList = new ArrayList<>();  // Initialize the ArrayList
-
+        Intent intent = getIntent();
+        check = intent.getBooleanExtra("check", false);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
@@ -80,7 +82,7 @@ public class QuranActivity extends AppCompatActivity {
                                     quranModelArrayList.get(i).setTxtSurahArbicName(surahNamesArabic.get(i));
                                 }
 
-                                readQuranAdapter = new ReadQuranAdapter(QuranActivity.this, quranModelArrayList);
+                                readQuranAdapter = new ReadQuranAdapter(QuranActivity.this, quranModelArrayList,check);
                                 quranSurahLists.setAdapter(readQuranAdapter);
 
                             } else {

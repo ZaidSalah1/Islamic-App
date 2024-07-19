@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.islamicapp.Activties.Athkar;
 import com.example.islamicapp.Activties.QuranActivity;
+import com.example.islamicapp.Activties.QuranSelectionActivity;
 import com.example.islamicapp.Activties.TasbihActivity;
 import com.example.islamicapp.Models.HorModel;
 import com.example.islamicapp.R;
@@ -54,7 +55,7 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.MyViewHo
             public void onClick(View view) {
                 row_index = position;
                 if(row_index == 0){
-                    Intent intent = new Intent(context, QuranActivity.class);
+                    Intent intent = new Intent(context, QuranSelectionActivity.class);
                     context.startActivity(intent);
                 }
 

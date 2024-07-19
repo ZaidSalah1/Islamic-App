@@ -1,17 +1,15 @@
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activties.MainActivity"
     android:background="#006634"
-    >
+    tools:context=".Activties.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="230dp"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -19,15 +17,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:title="Athkar"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:expandedTitleTextColor="@color/white">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/mosq"
                 android:scaleType="centerCrop"
-                />
+                android:src="@drawable/mosq" />
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
@@ -35,7 +33,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:title="Athkar"
-                app:titleTextColor="@color/white"/>
+                app:titleTextColor="@color/white" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -50,12 +48,11 @@
             android:id="@+id/nestedScrollView"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="@drawable/bg_shape"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/bg_shape"
-            >
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -65,10 +62,10 @@
                 android:padding="5dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:layout_marginTop="10dp"
                     android:id="@+id/hRecyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -83,35 +80,49 @@
                         android:src="@drawable/img2" />
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    app:cardCornerRadius="20dp">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="220dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/main_img1" />
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    app:cardCornerRadius="20dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="220dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/main_img1" />
-                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:fabCradleRoundedCornerRadius="50dp"
+        app:fabCradleMargin="10dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNaviBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_menu"
+
+            android:background="@android:color/transparent" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pryer_ic2"
+        android:foregroundTint="@color/white"
+        app:layout_anchor="@id/appBar"
+        android:background="@color/purple_200"
+        app:tint="@color/white"
+        app:maxImageSize="30dp"
+        />
+    
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

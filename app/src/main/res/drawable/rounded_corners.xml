@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- res/drawable/rounded_corners.xml -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#F2FFFFFF" /> <!-- Set your desired background color -->
-    <corners android:radius="16dp" /> <!-- Set your desired corner radius -->
-    <stroke
-
-        android:width="1dp"
-        android:color="@android:color/darker_gray" /> <!-- Optional: Add a border -->
-
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background layer with rounded corners at the top -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="50dp"
+                android:topRightRadius="50dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+    <!-- Bitmap layer for your background image -->
+    <item>
+        <bitmap
+            android:src="@drawable/background4"
+            android:gravity="fill"/>
+    </item>
+</layer-list>

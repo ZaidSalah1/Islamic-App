@@ -9,9 +9,9 @@
     android:layout_marginRight="8dp"
     android:layout_marginTop="10dp"
     android:background="#f2e2ca"
-    app:cardBackgroundColor="#fff8ee"
     android:layout_gravity="center|top"
     android:id="@+id/cardViewAthkar"
+    app:cardBackgroundColor="#fff8ee"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
