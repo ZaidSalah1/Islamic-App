@@ -14,6 +14,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.islamicapp.Activties.Athkar;
+import com.example.islamicapp.Activties.NasheedsActivity;
+import com.example.islamicapp.Activties.QiblaActivity;
 import com.example.islamicapp.Activties.QuranActivity;
 import com.example.islamicapp.Activties.QuranSelectionActivity;
 import com.example.islamicapp.Activties.TasbihActivity;
@@ -65,6 +67,16 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.MyViewHo
                 }
                 if(row_index == 2){
                     Intent intent = new Intent(context, TasbihActivity.class);
+                    context.startActivity(intent);
+                }
+
+                if(row_index == 5){
+                    Intent intent = new Intent(context, NasheedsActivity.class);
+                    context.startActivity(intent);
+                }
+
+                if(row_index == 4){
+                    Intent intent = new Intent(context, QiblaActivity.class);
                     context.startActivity(intent);
                 }
             }

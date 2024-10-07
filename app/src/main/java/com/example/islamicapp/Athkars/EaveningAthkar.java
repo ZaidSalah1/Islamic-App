@@ -35,6 +35,10 @@ public class EaveningAthkar extends AppCompatActivity {
         athkarAdapter = new AthkarAdapter(this, athkarModelsList);
         athkarhRecyclerView.setAdapter(athkarAdapter);
 
+        LottieAnimationView lottieAnimationView = findViewById(R.id.athkar_done);
+        AthkarAdapter adapter = new AthkarAdapter(this, athkarModelsList, lottieAnimationView);
+        athkarhRecyclerView.setAdapter(adapter);
+
     }
 
     private void athkarData(){//"اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ "

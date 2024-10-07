@@ -18,7 +18,7 @@
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/athkar_done"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="520dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/eavening_athkar_list"
         app:layout_constraintEnd_toEndOf="parent"

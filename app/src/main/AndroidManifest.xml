@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -15,12 +17,23 @@
         android:theme="@style/Theme.IslamicApp"
         tools:targetApi="31">
         <activity
+            android:name=".Activties.QiblaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activties.NasheedsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Athkars.MosqueAthkar"
+            android:exported="false" />
+        <activity
+            android:name=".Activties.DailyDataActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activties.QuranSelectionActivity"
             android:exported="false" />
         <activity
             android:name=".Activties.ReadListen"
             android:exported="false" />
-
         <activity
             android:name=".Activties.SurahActivity"
             android:exported="false" />
@@ -55,6 +68,11 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".AudioService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
     </application>
 
 </manifest>

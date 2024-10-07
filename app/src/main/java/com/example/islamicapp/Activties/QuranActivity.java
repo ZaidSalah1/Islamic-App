@@ -1,12 +1,15 @@
 package com.example.islamicapp.Activties;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -32,10 +35,21 @@ public class QuranActivity extends AppCompatActivity {
     private ArrayList<QuranModel> quranModelArrayList;
     private ArrayList<String> surahNamesArabic;
     boolean check;
+    private TextView tollBarTxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quran);
+
+
+        tollBarTxt = findViewById(R.id.toolbar_title);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        tollBarTxt.setText("Quran");
+        getSupportActionBar().setTitle(null);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
         quranSurahLists = findViewById(R.id.surahsNames_list);
         quranSurahLists.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -221,5 +235,12 @@ public class QuranActivity extends AppCompatActivity {
                 "سورة الناس"
         ));
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {  // 'home' is the ID of the back arrow button
+            finish();  // Close this activity and go back to the previous one
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

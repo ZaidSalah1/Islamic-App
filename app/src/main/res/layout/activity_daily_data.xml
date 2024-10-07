@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activties.QuranActivity"
+    tools:context=".Activties.DailyDataActivity"
     android:background="@drawable/background4">
 
     <androidx.appcompat.widget.Toolbar
@@ -15,7 +15,8 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         <TextView
             android:id="@+id/toolbar_title"
@@ -28,13 +29,13 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/surahsNames_list"
+        android:id="@+id/dailyDataRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        android:layout_marginBottom="20dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

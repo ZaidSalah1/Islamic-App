@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.islamicapp.Adapter.AthkarAdapter;
 import com.example.islamicapp.Models.AthkarModel;
 import com.example.islamicapp.R;
@@ -26,15 +27,21 @@ public class SalahAthkar extends AppCompatActivity {
 
         athkarData();
 
-        athkarhRecyclerView = findViewById(R.id.salah_athkar_list);
+        athkarhRecyclerView = findViewById(R.id.list);
         athkarhRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         athkarAdapter = new AthkarAdapter(this, athkarModelsList);
         athkarhRecyclerView.setAdapter(athkarAdapter);
 
+
+        LottieAnimationView lottieAnimationView = findViewById(R.id.athkar_done);
+        AthkarAdapter adapter = new AthkarAdapter(this, athkarModelsList, lottieAnimationView);
+        athkarhRecyclerView.setAdapter(adapter);
+
     }
 
-    private void athkarData(){//"اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ "
+    private void athkarData(){
+        //"اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ "
         // athkarModelsList.add(new AthkarModel(3 ,""));
         athkarModelsList = new ArrayList<>();
         athkarModelsList.add(new AthkarModel(1,"أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله.\n" +

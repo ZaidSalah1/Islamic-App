@@ -1,14 +1,18 @@
 package com.example.islamicapp.Activties;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.islamicapp.Adapter.AthkarAdapter;
+import com.example.islamicapp.Athkars.MosqueAthkar;
 import com.example.islamicapp.Models.AthkarModel;
 import com.example.islamicapp.Models.HorModel;
 import com.example.islamicapp.R;
@@ -27,11 +31,21 @@ public class Athkar extends AppCompatActivity {
 
     private RecyclerView hRecyclerView;
     private ArrayList<HorModel> athkarHorModelsList;
-    private CardView morning_athkar,eavening_athkar,salah_athkar;
+    private CardView morning_athkar,eavening_athkar,salah_athkar,mosque_athkar;
+    private TextView tollBarTxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_athkar);
+
+
+        tollBarTxt = findViewById(R.id.toolbar_title);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        tollBarTxt.setText("Athkar");
+        getSupportActionBar().setTitle(null);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         morning_athkar = findViewById(R.id.morning_athkar);
         morning_athkar.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +74,16 @@ public class Athkar extends AppCompatActivity {
             }
         });
 
+        mosque_athkar = findViewById(R.id.mosque_athkar);
+        mosque_athkar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Athkar.this, MosqueAthkar.class);
+                startActivity(intent);
+            }
+        });
+
+
        // athkarData();
 
         //        Toolbar toolbar = findViewById(R.id.toolbar);
@@ -82,6 +106,16 @@ public class Athkar extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {  // 'home' is the ID of the back arrow button
+            finish();  // Close this activity and go back to the previous one
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void athkarData(){//"اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ "
 
         athkarModelsList = new ArrayList<>();

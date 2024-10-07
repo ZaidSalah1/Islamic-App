@@ -88,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
          homeHorModelsList.add(new HorModel("Athkar", R.drawable.athkar_icon_2));
          homeHorModelsList.add(new HorModel("Tasbih", R.drawable.tasbih_new3));
          homeHorModelsList.add(new HorModel("Prayer Time", R.drawable.salah_ic));
-         homeHorModelsList.add(new HorModel("Nasheeds", R.drawable.nashed));
+         homeHorModelsList.add(new HorModel("Qibla", R.drawable.qaba));
+         homeHorModelsList.add(new HorModel("Nasheeds", R.drawable.nasheed_icon));
          homeHorModelsList.add(new HorModel("Quiz", R.drawable.quiz));
      }
 
