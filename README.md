@@ -8,80 +8,50 @@
 
 ## Overview
 
-The **Athkar App** is a beautifully designed mobile application aimed at helping Muslims easily access and recite daily supplications (Athkar), read and listen to the Holy Quran, and engage in Tasbih (remembrance of Allah). With a clean, intuitive interface and essential features, this app serves as a digital companion for enhancing one's spiritual routine.
+Athkar App is a user-friendly mobile application designed to help Muslims effortlessly access and engage with daily supplications (Athkar), read and listen to the Holy Quran, and perform Tasbih with ease. The app offers a clean interface and essential features that support your spiritual routine.
 
 ---
 
 ## Features
 
 ### Home Screen
-- A welcoming dashboard displaying an important reminder and quick access to core features.
+- Quick access to main sections with an important daily reminder.
 
 ### Quran
-- Navigate through the chapters (Surahs) of the Holy Quran.
-- Read and listen to Quranic verses with clear Arabic script and audio playback.
+- Browse and select Surahs.
+- Read clear Arabic text.
+- Listen to high-quality audio recitations.
 
 ### Athkar
-- Access a categorized collection of daily supplications.
+- Organized collections of supplications for various occasions, such as Morning, Evening, Mosque, After Salah, and more.
+- Each Athkar includes Arabic text and a repetition counter.
 
-### Tasbih
-- A digital counter to assist with Tasbih.
-- **Animated effects** when tapping the screen for a more engaging experience.
-- **Progress tracking** to follow your daily Tasbih achievements.
-
----
-
-## Quran Section
-- Browse and select different Surahs of the Quran.
-- Read the Quranic verses with clear Arabic script.
-- Listen to the recitation with high-quality audio playback.
+### Tasbih Counter
+- Digital counter with engaging animations on tap.
+- Tracks your daily progress and overall achievements.
 
 ---
 
-## Athkar Section
-Categorized Athkar for various occasions:
-- Morning Athkar
-- Evening Athkar
-- Mosque Athkar
-- After Salah Athkar
-- House Athkar
-- Sleep Athkar
-- Food Athkar
-- Bathroom Athkar
-
-Each Athkar entry includes the Arabic text and a counter to help track repetitions.
+## User Experience
+- Modern green-and-white color scheme for a calming feel.
+- Intuitive bottom navigation bar for easy switching between Home, Quran, Athkar, and Profile.
+- Clear Arabic typography for comfortable reading.
 
 ---
 
-## Tasbih Counter
-- A simple yet effective digital Tasbih counter.
-- Displays the current count and a "Today Total" to track overall progress.
-- Features animated visual effects on screen tap to enhance user interaction.
-- Tracks your daily Tasbih achievements so you can monitor your progress.
+## Coming Soon
 
----
+Exciting features in development to enhance your spiritual journey:
 
-## User-Friendly Interface
-- Modern and clean design with a calming green and white color palette.
-- Intuitive navigation with a bottom bar for easy switching between Home, Quran, Athkar, and Mine sections.
-- Clear and readable Arabic typography.
-
----
-
-## Upcoming Features
-
-More exciting features are on the way to enhance your spiritual journey, including:
-
-- **Reminders and Notifications** to remind you to read your morning and evening Athkar.
-- Notifications alerting you when it's time for prayer.
-- A dedicated **Achievements Page** to track your daily progress, including Quran reading milestones and Athkar recitations.
-
-Stay tuned for these updates!
+- Notifications reminding you to read morning and evening Athkar.
+- Prayer time alerts.
+- A dedicated achievements page to monitor your Quran reading and Athkar progress daily.
 
 ---
 
 ## Screenshots
-Here's a glimpse of the app in action above!  
-(You can add more screenshots below if you want)
+
+Check the app screenshots above!  
+(Add more images here if needed.)
 
 ---
