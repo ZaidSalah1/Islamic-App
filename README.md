@@ -1,6 +1,6 @@
 Athkar App 🤲
 &lt;p align="center">
-&lt;img src="/athkar/athkar4screens.png" alt="Athkar App Screenshots" width="700"/>
+&lt;img src="athkar/athkar4screens.png" alt="Athkar App Screenshots" width="700"/>
 &lt;/p>
 
 Overview
